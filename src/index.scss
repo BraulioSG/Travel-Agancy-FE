@@ -1,0 +1,34 @@
+//TYPOGRAPHY
+$font-display: 'Arima Madurai', cursive;
+$font-sans: 'Raleway', sans-serif;
+// COLOR PALLETTE
+//colors
+$white: #fefefe;
+$black: #2b2c34;
+$purple: #6246ea;
+$lila: #d1d1e9;
+$red: #e45858;
+//sections
+$background: $white;
+$headline: $black;
+$paragraph: $black;
+$button-bg: $purple;
+$button-txt: $white;
+$background-secondary: $lila;
+$card-bg: $white;
+$links: $purple; 
+
+*{
+    color: $paragraph;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+    background-color: $background;
+}
+h1,h2,h3,h4,h5,h6{
+    color: $headline
+}
+
