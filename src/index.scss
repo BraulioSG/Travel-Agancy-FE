@@ -18,6 +18,13 @@ $background-secondary: $lila;
 $card-bg: $white;
 $links: $purple; 
 
+
+//Breakpoints
+$small: 600px;
+$medium: 768px;
+$large: 992px;
+$extralarge: 1200px;
+
 *{
     color: $paragraph;
     margin: 0;
