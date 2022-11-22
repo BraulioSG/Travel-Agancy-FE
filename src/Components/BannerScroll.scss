@@ -1,0 +1,214 @@
+@import '../index.scss';
+.banner{
+    margin: auto;
+    max-width: $max-section-width;
+    width: 100vw;
+    height: 600px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: $lila;
+    z-index: 0;
+    .banner-scroll{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: -1;
+        .banner-scroll-container{
+            width: 500vw;
+            max-width: calc(5*$max-section-width);
+            animation: banner-scroll 10s ease infinite;
+            .banner-scroll-segment{
+                display: inline-flex;
+                align-content: flex-end;
+                .banner-scroll-segment-image{
+                    width: 100vw;
+                    max-width: $max-section-width;
+                }
+            }
+        }
+    }
+
+    .banner-text{
+        padding: 20px;
+        background-color: rgba($color: $lila, $alpha: 0.5);
+        backdrop-filter: blur(3px);
+        border-radius: 10px;
+        border: 1px solid $lila;
+        position: relative;
+        $font-size: 32px;
+        font-size: $font-size;
+        font-weight: bold;
+        width: 90vw;
+        max-width: 500px;
+        height: 90%;
+        max-height: 300px;
+        font-family: $font-sans;
+        margin: 0 10%;
+        overflow: hidden;
+        .banner-text-swap-text-container{
+            width: fit-content;
+            height: $font-size + 10;
+            overflow: hidden;
+            .banner-text-swap-list{
+                animation: text-swap 10s ease infinite;
+            }
+        }
+
+        .banner-text-subheading{
+            font-size: 18px;
+            margin-top: 10px;
+            font-weight: 400;
+        }
+        .banner-text-buttons{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            width: 100%;
+            bottom: 10px;
+            right: 0;
+            .banner-text-buttons-signup, .banner-text-buttons-login{
+                font-weight: 400;
+                transition: transform 0.3s ease;
+                padding: 10px;
+                text-align: center;
+                &:hover{
+                    transform: scale(1.1);
+                }
+
+            }
+
+            .banner-text-buttons-signup{
+                font-size: 20px;
+                background-color: $purple;
+                color: $white;
+                border-radius: 5px;
+            }
+
+            .banner-text-buttons-login{
+                font-size: 18px;
+                font-weight: bold;
+                text-decoration: underline;
+                color: $purple
+            }
+        }
+    }
+}
+
+@keyframes banner-scroll {
+    $steps: 5; 
+    0%,15%{
+        transform: translate(calc(-100% / $steps * 0));
+    }
+    20%,35%{
+        transform: translate(calc(-100% / $steps * 1));
+    }
+    40%,55%{
+        transform: translate(calc(-100% / $steps * 2));
+    }
+    60%,75%{
+        transform: translate(calc(-100% / $steps * 3));
+    }
+    80%,95%{
+        transform: translate(calc(-100% / $steps * 4));
+    }
+
+}
+
+
+@keyframes text-swap {
+    $steps: 5; 
+    0%,15%{
+        transform: translateY(calc(-100% / $steps * 0));
+    }
+    20%,35%{
+        transform: translateY(calc(-100% / $steps * 1));
+    }
+    40%,55%{
+        transform: translateY(calc(-100% / $steps * 2));
+    }
+    60%,75%{
+        transform: translateY(calc(-100% / $steps * 3));
+    }
+    80%,95%{
+        transform: translateY(calc(-100% / $steps * 4));
+    }
+
+}
+
+
+
+@media only screen and (max-width: $small) {
+    .banner{
+        justify-content: center;
+        height: 300px;
+        .banner-scroll{
+            min-height: 300px;
+            height: 300px;
+            .banner-scroll-container{
+                padding: 0;
+                .banner-scroll-segment{
+                    .banner-scroll-segment-image{
+                        min-height: 300px;
+                        width: 100vw;
+                    }
+                }
+            }
+        }  
+        .banner-text{
+            $font-size: 24px;
+            .banner-text-heading, .banner-text-swap{
+                font-size: $font-size;
+            }
+            .banner-text-swap-text-container{
+                height: $font-size + 10px;
+            }
+        }
+
+        .banner-text-buttons{
+            margin: 0px;
+            transform: scale(0.9);
+        }
+    }
+    
+}
+
+@media only screen and (min-width: calc($small + 1px)) and (max-width: $medium) {
+    .banner{
+        height: 500px;
+        justify-content: center;
+        .banner-scroll{
+            .banner-scroll-container{
+                .banner-scroll-segment{
+                    height: 100%;
+                    overflow-y: hidden;
+                    position: relative;
+                    .banner-scroll-segment-image{
+                        min-height: 500px;
+                        height: 500px;
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: calc($medium + 1px)) and (max-width: $large) {
+    .banner{
+        .banner-scroll{
+            .banner-scroll-container{
+                .banner-scroll-segment{
+                    .banner-scroll-segment-image{
+                        height: 600px;
+                    }
+                }
+            }
+        }
+    }
+    
+}

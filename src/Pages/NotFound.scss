@@ -20,17 +20,19 @@
     }
 
     .not-found-curves-tl{
-        top:0;
+        top:-5%;
         left: -10%;
         transform: scale(-1);
         z-index: 10;
+        animation: fade-down 1s ease;
         
     }
 
     .not-found-curves-br{
-        bottom: -10%;
+        bottom: -5%;
         right: -10%;
         z-index: 20;
+        animation: fade-up 1s ease;
     }
 
     .not-found-content{
@@ -41,6 +43,7 @@
         align-items: center;
         justify-content: center;
         gap: 50px;
+        animation: zoom-in 0.5s ease;
 
         .not-found-content-title{
             text-align: center;
@@ -52,7 +55,7 @@
             background: $white;
             text-decoration: none;
             font-weight: bold;
-            font-size: 2.7em;
+            font-size: 2em;
             padding: 10px 20px;
             border-radius: 10px;
             transition: all 0.3s ease;
@@ -68,7 +71,34 @@
 }
 
 //@debug $small; shows the value of the variable on console
+@keyframes fade-down{
+    from{
+        top: -100%;
+    }
+    to{
+        top: -5%;
+    }
+}
 
+@keyframes fade-up {
+    from{
+        bottom: -100%;
+    }
+    
+    to{
+        bottom: -5%;
+    }
+}
+
+@keyframes zoom-in {
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+    
+}
 //Devices with a maximun witdh of 600px
 @media only screen and (max-width: $small){
     .not-found{
@@ -90,16 +120,16 @@
         .not-found-curves-br, .not-found-curves-tl{
             position: absolute;
             width: 100vw;
-            max-height: 600px;
+            max-height: 2000px;
             max-width: 1000px;
         }
 
         .not-found-curves-br{
-            right: -20%;
+            right: -15%;
         }
 
         .not-found-curves-tl{
-            left: -20%;
+            left: -15%;
         }
     }
 }

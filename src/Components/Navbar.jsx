@@ -14,25 +14,27 @@ function Navbar() {
     return (
         <>
             <div className="navbar">
-                <div className="navbar-title">
-                    <h1>Aterrizar.com</h1>
+                <div className="navbar-desktop-menu">
+                    <div className="navbar-title">
+                        <h1>Aterrizar.com</h1>
+                    </div>
+                    <nav className="navbar-nav">
+                        <ul className="navbar-nav-list">
+                            <li className="navbar-nav-list-item">
+                                <Link href="/">Destinos</Link>
+                            </li>
+                            <li className="navbar-nav-list-item">
+                                <Link href="/">Ofertas</Link>
+                            </li>
+                            <li className="navbar-nav-list-item">
+                                <Link href="/">Paquetes</Link>
+                            </li>
+                            <li className="navbar-nav-list-item navbar-nav-mi-cuenta">
+                                <Link href="/">Mi Cuenta</Link>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav className="navbar-nav">
-                    <ul className="navbar-nav-list">
-                        <li className="navbar-nav-list-item">
-                            <Link href="/">Destinos</Link>
-                        </li>
-                        <li className="navbar-nav-list-item">
-                            <Link href="/">Ofertas</Link>
-                        </li>
-                        <li className="navbar-nav-list-item">
-                            <Link href="/">Paquetes</Link>
-                        </li>
-                        <li className="navbar-nav-list-item navbar-nav-mi-cuenta">
-                            <Link href="/">Mi Cuenta</Link>
-                        </li>
-                    </ul>
-                </nav>
                 <div className="navbar-mobile-open-button">
                     <span
                         className="material-symbols-outlined"
