@@ -1,0 +1,8 @@
+@import '../index.scss';
+.home-section{
+    width: 100%;
+    right: 0;
+    max-width: $max-section-width;
+    min-height: 300px;
+    margin: auto;
+}

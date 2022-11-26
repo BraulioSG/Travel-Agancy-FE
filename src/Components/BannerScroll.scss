@@ -1,20 +1,22 @@
 @import '../index.scss';
 .banner{
-    margin: auto;
-    max-width: $max-section-width;
-    width: 100vw;
-    height: 600px;
+
+    overflow: hidden;
+    height: 500px;
+    width: 100%;
+    margin: 0;
+    max-height: 500px;
     position: relative;
     display: flex;
     align-items: center;
     background-color: $lila;
     z-index: 0;
+
     .banner-scroll{
         position: absolute;
         top: 0;
         left: 0;
-        width: 100%;
-        height: 100%;
+        width: 100vw;
         overflow: hidden;
         z-index: -1;
         .banner-scroll-container{
@@ -22,6 +24,8 @@
             max-width: calc(5*$max-section-width);
             animation: banner-scroll 10s ease infinite;
             .banner-scroll-segment{
+                max-width: 100vw;
+                overflow-x: hidden;
                 display: inline-flex;
                 align-content: flex-end;
                 .banner-scroll-segment-image{
@@ -33,7 +37,7 @@
     }
 
     .banner-text{
-        padding: 20px;
+        padding-left: 20;
         background-color: rgba($color: $lila, $alpha: 0.5);
         backdrop-filter: blur(3px);
         border-radius: 10px;
@@ -42,7 +46,7 @@
         $font-size: 32px;
         font-size: $font-size;
         font-weight: bold;
-        width: 90vw;
+        width: 90%;
         max-width: 500px;
         height: 90%;
         max-height: 300px;

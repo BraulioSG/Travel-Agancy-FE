@@ -1,12 +1,11 @@
 @import '../index.scss';
 .navbar{
-    width: 100vw;
+    width: 100%;
     border-bottom: 3px solid $purple;
     background-color: $white;
     position: sticky;
     z-index: 100;
     top: 0;
-    
     .navbar-desktop-menu{
         position: relative;
         display: flex;

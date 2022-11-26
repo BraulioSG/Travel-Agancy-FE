@@ -1,0 +1,19 @@
+@import '../index.scss';
+
+.footer{
+    
+    width: 100%;
+    background-color: $purple;
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow-x: hidden;
+    .footer-content{
+        width: 500px;
+        height: 20px;
+        outline: 3px solid green;
+        max-width: $max-section-width;
+    }
+}
