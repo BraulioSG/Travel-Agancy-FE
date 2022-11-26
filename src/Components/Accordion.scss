@@ -1,0 +1,43 @@
+@import '../index.scss';
+
+.accordion{
+    margin: 20px;
+    .accordion-title{
+        width: 100%;
+        text-align: left;
+        padding: 10px;
+        background-color: #efefef;
+        border: none;
+        transition: 0.3s background-color ease;
+        font-weight: bolder;
+        font-size: 16pt;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .accordion-icon{
+            font-size: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-icon-up{
+            transform: rotate(180deg);
+        }
+        &:hover{
+            cursor: pointer;
+            background-color: $lila;
+        }
+    }
+
+    .accordion-content{
+        height: 0;
+        overflow: hidden;
+        margin: auto;
+        height: fit-content;
+        max-height: 0;
+        transition: all 0.5s ease;
+    }
+
+    .accordion-content-show{
+       max-height: 100px;
+    }
+}

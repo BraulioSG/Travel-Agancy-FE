@@ -1,0 +1,13 @@
+@import '../index.scss';
+
+.home-section{
+    margin: 20px;
+
+    .card-container{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
