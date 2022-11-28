@@ -1,13 +1,55 @@
 @import '../index.scss';
 
 .home-section{
-    margin: 20px;
-
+    padding: 20px 0;
+    position: relative;
     .card-container{
-        width: 80%;
+        width: 100%;
         margin: auto;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        font-size: 14pt;
+        justify-content: space-around;
     }
+
+    .quienes-somos-container{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+        position: relative;
+        .quienes-somos-text{
+            display: flex;
+            margin: 20px 0;
+            width: calc(100% - 220px);
+            min-width: 300px;
+            font-size: 14pt;
+        }
+        .quienes-somos-img{
+            width: 200px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            max-width: 400px;
+            img{
+                width: 100%;
+            }
+        }
+
+    }    
+}
+
+@media only screen and (max-width: $medium){
+    .quienes-somos-container{
+        display: flex;
+        flex-direction: column;
+        .quienes-somos-text{
+            width: 100% !important;
+            min-width: 500px;
+        }
+    } 
+    
 }

@@ -1,5 +1,6 @@
 @import '../index.scss';
 .navbar{
+    user-select: none;
     width: 100%;
     border-bottom: 3px solid $purple;
     background-color: $white;
@@ -44,7 +45,7 @@
                         align-items: center;
                         justify-content: center;
                         transition: color 0.3s ease;
-                        padding: 0 20px;
+                        padding: 0 10px;
                         &:hover{
                             font-weight: bold;
                             color: $purple;
@@ -57,12 +58,12 @@
                 .navbar-nav-mi-cuenta{
                     display: flex;
                     justify-content: center;
-                    align-items: center;
+                    align-items: center;;
                     a{
                         background-color: $purple;
                         color: $white;
                         transition: all 0.3s ease;
-                        width: 150px;
+                        min-width: 100px;
                         height: 50px;
                         border-radius: 25px;
 
@@ -188,12 +189,10 @@
             .navbar-nav-list{
                 .navbar-nav-list-item{
                     a{
+                        font-size: 10pt;
                         padding:0 10px;
                     }
 
-                }
-                .navbar-nav-mi-cuenta{
-                    width: 120px;
                 }
             }
         }

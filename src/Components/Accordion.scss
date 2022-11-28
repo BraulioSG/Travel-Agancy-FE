@@ -1,7 +1,7 @@
 @import '../index.scss';
 
 .accordion{
-    margin: 20px;
+    margin: 20px auto;
     .accordion-title{
         width: 100%;
         text-align: left;
@@ -35,6 +35,7 @@
         height: fit-content;
         max-height: 0;
         transition: all 0.5s ease;
+        font-size: 14pt;
     }
 
     .accordion-content-show{

@@ -1,17 +1,37 @@
 @import '../index.scss';
 
 .footer{
-    
+    user-select: none;
     width: 100%;
     background-color: $purple;
     min-height: 300px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow-x: hidden;
+    text-align: center;
+    h1, h2, a{
+        color: white;
+    }
+    .footer-title{
+        margin: 20px 0;
+    }
     .footer-content{
-        width: 500px;
+        font-size: 10pt;
         max-width: $max-section-width;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap:20px;
+        .footer-col{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-width: 150px;
+            a{
+                transition: color 0.3s ease;
+                &:hover{
+                    color: $lila;
+                }
+            }
+        }
     }
 }
+
+@debug $small;

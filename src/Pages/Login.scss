@@ -1,0 +1,63 @@
+@import '../index.scss';
+
+.login{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    .login-title{
+        font-weight: bold;
+        font-size: 24pt;
+        color: $purple;
+        position: absolute;
+        padding: 15px;
+        top: 0;
+        width: 100%;
+    }
+    .login-decoration{
+        z-index: -1;
+        .login-curves{
+            position: absolute;
+            bottom: -5%;
+            right: -10%;
+            animation:  login-curves 2s ease-in-out;
+            img{
+                width: 80vw;
+            }
+        }
+        .login-plane{
+            position: absolute;
+            right: 20%;
+            bottom: 30%;
+            animation: login-plane 2.5s ease-in-out ;
+        }
+
+    }
+
+    .login-form-container{
+        width: 700px;
+        margin-left: 100px;
+        padding: 15px;
+        background-color: $white;
+        box-shadow: 10px 10px 20px #5f5f5f;
+        outline: 1px solid black;
+        
+    }
+}
+
+@keyframes login-curves {
+    from{
+        transform: translate(100%, 150%);
+    }
+    to{
+        transform: translate(0%);
+    }
+}
+
+@keyframes login-plane {
+    from {
+        transform: translate(-200%, 200%) scale(0);
+    }
+}

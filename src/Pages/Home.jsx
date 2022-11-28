@@ -15,7 +15,26 @@ function Home() {
             <Navbar />
             <BannerScroll />
             <HomeSection>
-                <h1>Promociones</h1>
+                <h1>¿Quienes Somos?</h1>
+                <div className="quienes-somos-container">
+                    <div className="quienes-somos-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolore, odio distinctio laboriosam laudantium alias
+                        commodi repellat nemo ea minima eius asperiores sed sit
+                        omnis ipsam culpa sequi molestias. Dolorum, ab. Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit.
+                        Dolore, odio distinctio laboriosam laudantium alias
+                        commodi repellat nemo ea minima eius asperiores sed sit
+                        omnis ipsam culpa sequi molestias. Dolorum, ab. Lorem
+                        ipsum dolor sit amet consectetur adipisicing elit. Eius
+                        sit molestiae, ipsa sunt molestias reprehenderit aperiam
+                        ipsum quas veniam iure accusantium, ad quidem distinctio
+                        officia sint neque eos similique ea!
+                    </div>
+                    <div className="quienes-somos-img">
+                        <img src="/assets/icons/plane.png" alt="airplane" />
+                    </div>
+                </div>
             </HomeSection>
             <HomeSection>
                 <h1>Why Us</h1>

@@ -6,6 +6,7 @@ import './Navbar.scss';
 
 function Navbar() {
     const [showMenu, setShowMenu] = useState('');
+    const [logged, setLogged] = useState(true);
 
     const toggleMenu = evt => {
         evt.preventDefault(); //! Avoids re-rendering
@@ -21,16 +22,15 @@ function Navbar() {
                     <nav className="navbar-nav">
                         <ul className="navbar-nav-list">
                             <li className="navbar-nav-list-item">
-                                <Link href="/">Destinos</Link>
+                                <Link href="/fly">Destinos</Link>
                             </li>
                             <li className="navbar-nav-list-item">
-                                <Link href="/">Ofertas</Link>
-                            </li>
-                            <li className="navbar-nav-list-item">
-                                <Link href="/">Paquetes</Link>
+                                <Link href="/promotions">Ofertas</Link>
                             </li>
                             <li className="navbar-nav-list-item navbar-nav-mi-cuenta">
-                                <Link href="/">Mi Cuenta</Link>
+                                <Link href="/account">
+                                    {logged ? 'Mi cuenta' : 'Ingresar'}
+                                </Link>
                             </li>
                         </ul>
                     </nav>
@@ -54,16 +54,16 @@ function Navbar() {
                     </div>
                     <ul className="navbar-mobile-menu-list">
                         <li className="navbar-mobile-menu-list-item">
-                            <Link href="/">Destinos</Link>
+                            <Link href="/fly">Destinos</Link>
                         </li>
                         <li className="navbar-mobile-menu-list-item">
-                            <Link href="/">Ofertas</Link>
+                            <Link href="/oromotions">Ofertas</Link>
                         </li>
+
                         <li className="navbar-mobile-menu-list-item">
-                            <Link href="/">Paquetes</Link>
-                        </li>
-                        <li className="navbar-mobile-menu-list-item">
-                            <Link href="/">Mi Cuenta</Link>
+                            <Link href="/account">
+                                {logged ? 'Mi cuenta' : 'Ingresar'}
+                            </Link>
                         </li>
                     </ul>
                 </nav>
