@@ -3,13 +3,25 @@
 .input-field{
     width: 100%;
     $border-bottom-radius: 3px;
+    margin: 20px auto;
     
     overflow: hidden;
     .input-label{
         font-size: 14pt;
         font-weight: bold;
         display: block;
-        margin-left: 5px;
+        margin: 0 5px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span{
+            font-size: 10pt;
+            vertical-align: center;
+            color: rgb(191, 6, 6);
+            text-align: right;
+            margin-right: 5px;
+        }
     }
 
     .input-input{
@@ -17,14 +29,18 @@
         border: none;
         font-size: 12pt;
         padding: 5px;
-        background-color: $lila;
+        background-color: #f5f5f5;
         border-bottom: $border-bottom-radius solid $purple;
         outline: none;
-        transition: all 0.3s ease;
+        transition: all 0.5s ease;
         border-radius: $border-bottom-radius;
-        &:hover{
-            background-color: #f5f5f5;
-            border-color: $lila;
+        &:hover, &:focus, &:valid{
+            background-color: #6146ea0f;
+            border-color: $purple;
+        }
+
+        &:invalid {
+            border-color: red;
         }
     }
 }

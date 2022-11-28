@@ -19,10 +19,18 @@ function Login() {
                 </div>
                 <div className="login-form-container">
                     <form className="login-form">
+                        <h2>LOGIN</h2>
                         <InputField
                             name="usuario"
                             type="text"
                             placeholder="johndoe"
+                            required={true}
+                        />
+                        <InputField
+                            name="contraseña"
+                            type="text"
+                            placeholder="johndoe"
+                            required={true}
                         />
                     </form>
                 </div>
