@@ -22,7 +22,7 @@
             position: absolute;
             bottom: -5%;
             right: -10%;
-            animation:  login-curves 2s ease-in-out;
+            animation:  login-curves 1.5s ease-in-out;
             img{
                 width: 80vw;
             }
@@ -31,16 +31,71 @@
             position: absolute;
             right: 20%;
             bottom: 30%;
-            animation: login-plane 2.5s ease-in-out ;
+            animation: login-plane 1.7s ease-in-out ;
         }
 
     }
 
     .login-form-container{
-        width: 700px;
+        width: 100%;
+        max-width: 500px;
         margin-left: 100px;
-        padding: 15px;
-        background-color: $white;        
+        overflow: hidden;
+        background-color: rgba(255,255,255,0.5);
+        backdrop-filter: blur(50px);
+        border-radius: 10px;
+        animation: login-form 2s ease-in-out;
+        .login-form-scroll{
+            width: 200%;
+            display: flex;
+            align-items: center;
+            transition: 0.3s ease;
+            //transform: translate(-50%);
+            .login-form{
+                h2{
+                    width: 100%;
+                    text-align: center;
+                }
+                padding: 15px;
+                width: 100%;
+
+                .login-form-buttons{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin: auto;
+                    button{
+                        width: 50%;
+                        min-width: 200px;
+                        padding: 10px;
+                        border: none;
+                        transition: transform 0.3s ease;
+                        font-weight: bold;
+                        font-size: 12pt;
+                        &:hover{
+                            cursor: pointer;
+                            transform: scale(1.05);
+                        }
+
+                    }
+
+                    .login-form-button-main{
+                        color: $white;
+                        border-radius: 5px;
+                        background-color: $purple;
+                    }
+                    .login-form-button-secondary{
+                        background: none;
+                        color: $purple;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        .login-form-show-signup{
+            transform: translate(-50%);
+        }
+        
     }
 }
 
@@ -56,5 +111,55 @@
 @keyframes login-plane {
     from {
         transform: translate(-200%, 200%) scale(0);
+    }
+}
+
+@keyframes login-form {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+}
+
+@debug $medium;
+@media only screen and (max-width: $medium) {
+    .login{
+        justify-content: center;
+        .login-title{
+            
+            text-align: center;
+        }
+        
+        .login-form-container{
+            margin-left: 0;
+            margin-bottom: 150px;
+        }
+
+        .login-decoration{
+            .login-plane{
+                bottom: 5%;
+                right: 30%;
+                img{
+                    width: 300px;
+                }
+                
+            }
+        }
+
+        
+    }
+}
+@media only screen and (max-width: $large) {
+    .login{
+        .login-decoration{
+            .login-plane{
+                bottom: 15%;
+                right: 10%;
+                img{
+                    width: 300px;
+                }
+                
+            }
+        }
     }
 }

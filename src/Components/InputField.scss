@@ -7,18 +7,16 @@
     
     overflow: hidden;
     .input-label{
+        user-select: none;
         font-size: 14pt;
         font-weight: bold;
         display: block;
-        margin: 0 5px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        margin: 0 5px 10px;
         span{
-            font-size: 10pt;
+            margin-left: 5px;
+            font-size: 12pt;
             vertical-align: center;
-            color: rgb(191, 6, 6);
+            color: red;
             text-align: right;
             margin-right: 5px;
         }
@@ -37,10 +35,6 @@
         &:hover, &:focus, &:valid{
             background-color: #6146ea0f;
             border-color: $purple;
-        }
-
-        &:invalid {
-            border-color: red;
         }
     }
 }

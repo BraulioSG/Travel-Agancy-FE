@@ -9,7 +9,6 @@ import Home from './Pages/Home';
 import NotFound from './Pages/NotFound';
 import Account from './Pages/Account';
 import Login from './Pages/Login';
-import Signup from './Pages/Signup';
 function App() {
     useEffect(() => {
         AOS.init();
@@ -21,7 +20,6 @@ function App() {
                 <Route path="/" component={Home} />
                 <Route path="/account" component={Account} />
                 <Route path="/login" component={Login} />
-                <Route path="/signup" component={Signup} />
                 <Route path="/404" component={NotFound} />
 
                 {/* if path not found then redirect */}
