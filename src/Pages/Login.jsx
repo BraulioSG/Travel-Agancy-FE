@@ -4,6 +4,7 @@ import './Login.scss';
 //components
 import InputField from '../Components/InputField';
 import { useState } from 'react';
+import { Link } from 'wouter';
 
 function Login() {
     const [formSetup, setFormSetup] = useState('');
@@ -15,7 +16,9 @@ function Login() {
     return (
         <>
             <div className="login">
-                <h1 className="login-title">Aterrizar.com</h1>
+                <h1 className="login-title">
+                    <Link href="/"> Aterrizar.com</Link>
+                </h1>
                 <div className="login-decoration">
                     <div className="login-curves">
                         <img src="/assets/curves.svg" alt="" />

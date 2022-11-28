@@ -19,7 +19,7 @@ function Footer() {
                         <h2>Navegación</h2>
                         <Link href="/">Inicio</Link>
                         <Link href="/account">Mi Cuenta</Link>
-                        <Link href="/fly">Destinos</Link>
+                        <Link href="/destinations">Destinos</Link>
                         <Link href="/promotions">Ofertas</Link>
                     </div>
                     <div className="footer-col">

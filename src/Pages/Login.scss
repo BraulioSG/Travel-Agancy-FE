@@ -8,9 +8,11 @@
     align-items: center;
     overflow: hidden;
     .login-title{
-        font-weight: bold;
-        font-size: 24pt;
-        color: $purple;
+        a{
+            font-weight: bold;
+            font-size: 24pt;
+            color: $purple;
+        }
         position: absolute;
         padding: 15px;
         top: 0;
@@ -121,7 +123,6 @@
     }
 }
 
-@debug $medium;
 @media only screen and (max-width: $medium) {
     .login{
         justify-content: center;

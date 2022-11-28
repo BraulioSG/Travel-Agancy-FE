@@ -57,7 +57,7 @@ function NotFound() {
                         Page Not Found :(
                     </h1>
                     <Link href="/" className="not-found-content-button">
-                        Go Home
+                        Go home
                     </Link>
                 </div>
             </div>

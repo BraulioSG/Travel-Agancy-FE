@@ -1,1 +1,188 @@
 @import '../index.scss';
+
+.account-section{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    padding: 15px;
+
+
+    hr{
+        background-color: $lila;
+        padding: 1px;
+        border: none;
+        border-radius: 10px;
+        margin: 20px auto 0;
+    }
+    
+    .account-info{
+        display: flex;
+        gap: 20px;
+        .account-badge{
+            width: 125px;
+            height: 125px;
+            min-width: 125px;
+            background-color: $purple;
+            font-size: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100px;
+            .account-badge-letter{
+                color:white;
+                margin-bottom: 10px;
+            }
+        }
+
+        .account-general-information{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-weight: bold;
+            font-size: 12pt;
+            h2{
+                font-size: 20pt;
+                margin-bottom: 10px;
+            }
+
+            .account-email{
+                span{
+                    margin-left: 5px;
+                    font-weight: 400;
+                    font-style: italic;
+                }
+            }
+
+            .account-name{
+                span{
+                    margin-left: 5px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+
+    .account-update-container{
+        .account-update-form{
+            .account-update-name{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                border: none;
+
+                .input-field{
+                    margin: 0;
+                    width: 47%;
+                    min-width: 200px;
+                }
+            }
+        }
+    }
+
+    .account-security-section{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        div{
+            margin-top: 20px;
+            .input-field{
+                label{
+                    font-size: 12pt;
+                }
+                width: 100%;
+            }
+            width: 47%;
+            
+        }
+
+        .account-delete-account{
+            p{
+                margin-top: 20px
+            }
+
+            .account-delete-button{
+                margin: auto;
+                background-color: #dd0000;
+                border: none;
+                padding: 10px 15px;
+
+                width: 100%;
+                color: $white;
+                font-size: 12pt;
+                font-weight: bold;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 10px;
+                border-radius: 10px;
+                transition: all 0.3s ease;
+                span{
+                    vertical-align: middle;
+                    color: $white;
+                }
+
+                &:hover{
+                    cursor: pointer;
+                    background-color: #aa0000;
+                    transform: scale(1.05);
+                }
+
+            }
+        }
+
+    }
+}
+
+.account-save-changes{
+    position: sticky;
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    bottom: 5%;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .account-save-changes-button{
+        background-color: #00aa00;
+        border-radius: 10px;
+        border: none;
+        color: $white;
+        padding: 15px 25px;
+        font-size: 14pt;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        
+        span{
+            vertical-align: middle;
+            color: $white;
+        }
+
+        &:hover{
+            cursor: pointer;
+            background-color: #009900;
+            transform: scale(1.05);
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: $small){
+    .account-section{
+        .account-update-container{
+            .account-update-form{
+                .account-update-name{
+                    .input-field{
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        .account-security-section{
+            div{
+                width: 100%;
+            }
+        }
+    }
+}

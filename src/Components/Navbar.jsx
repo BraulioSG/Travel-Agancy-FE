@@ -17,12 +17,14 @@ function Navbar() {
             <div className="navbar">
                 <div className="navbar-desktop-menu">
                     <div className="navbar-title">
-                        <h1>Aterrizar.com</h1>
+                        <h1>
+                            <Link href="/">Aterrizar.com</Link>
+                        </h1>
                     </div>
                     <nav className="navbar-nav">
                         <ul className="navbar-nav-list">
                             <li className="navbar-nav-list-item">
-                                <Link href="/fly">Destinos</Link>
+                                <Link href="/destinations">Destinos</Link>
                             </li>
                             <li className="navbar-nav-list-item">
                                 <Link href="/promotions">Ofertas</Link>
@@ -54,10 +56,10 @@ function Navbar() {
                     </div>
                     <ul className="navbar-mobile-menu-list">
                         <li className="navbar-mobile-menu-list-item">
-                            <Link href="/fly">Destinos</Link>
+                            <Link href="/destinations">Destinos</Link>
                         </li>
                         <li className="navbar-mobile-menu-list-item">
-                            <Link href="/oromotions">Ofertas</Link>
+                            <Link href="/promotions">Ofertas</Link>
                         </li>
 
                         <li className="navbar-mobile-menu-list-item">
