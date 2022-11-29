@@ -4,9 +4,10 @@ import './Login.scss';
 //components
 import InputField from '../Components/InputField';
 import { useState } from 'react';
-import { Link } from 'wouter';
+import { Link, useLocation } from 'wouter';
 
 function Login() {
+    const [_location, setLocation] = useLocation();
     const [formSetup, setFormSetup] = useState('');
     const toggleForm = evt => {
         evt.preventDefault();
@@ -45,7 +46,10 @@ function Login() {
                                 required={true}
                             />
                             <div className="login-form-buttons">
-                                <button className="login-form-button-main">
+                                <button
+                                    className="login-form-button-main"
+                                    onClick={() => setLocation('/account')}
+                                >
                                     Ingresar
                                 </button>
                                 <button
@@ -77,8 +81,11 @@ function Login() {
                                 required={true}
                             />
                             <div className="login-form-buttons">
-                                <button className="login-form-button-main">
-                                    Ingresar
+                                <button
+                                    className="login-form-button-main"
+                                    onClick={() => setLocation('/account')}
+                                >
+                                    Registrar
                                 </button>
                                 <button
                                     className="login-form-button-secondary"
