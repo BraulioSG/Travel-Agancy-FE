@@ -24,10 +24,10 @@ function Navbar() {
                     <nav className="navbar-nav">
                         <ul className="navbar-nav-list">
                             <li className="navbar-nav-list-item">
-                                <Link href="/destinations">Destinos</Link>
+                                <Link href="/destinations">Explorar</Link>
                             </li>
                             <li className="navbar-nav-list-item">
-                                <Link href="/promotions">Ofertas</Link>
+                                <Link href="/login">Iniciar sesión</Link>
                             </li>
                             <li className="navbar-nav-list-item navbar-nav-mi-cuenta">
                                 <Link href="/account">
@@ -56,10 +56,10 @@ function Navbar() {
                     </div>
                     <ul className="navbar-mobile-menu-list">
                         <li className="navbar-mobile-menu-list-item">
-                            <Link href="/destinations">Destinos</Link>
+                            <Link href="/destinations">Explorar</Link>
                         </li>
                         <li className="navbar-mobile-menu-list-item">
-                            <Link href="/promotions">Ofertas</Link>
+                            <Link href="/login">Iniciar Sesión</Link>
                         </li>
 
                         <li className="navbar-mobile-menu-list-item">
